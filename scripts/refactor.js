@@ -193,7 +193,11 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
-
+function callNtimes(callback){
+  var range = Array.from(Array(x).keys());
+  range.forEach(callback);
+};
+}
 
 // -----------------------------------------------
 
