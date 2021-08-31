@@ -260,6 +260,12 @@ var twoPlusTwo = addNumbers(2,2);
 
 
 
+function addNumbers(numberA, numberB){
+ return console.log(numberA + numberB);
+
+};
+let twoPlusTwo = {...addNumbers};
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
