@@ -40,26 +40,58 @@ function isVowel(str) {
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
+  var consonants = [
+    'b', 'c', 'd', 'f', 'g', 'h', 'j',
+    'k', 'l', 'm', 'n', 'p', 'q', 'r',
+    's', 't', 'v', 'w', 'x', 'z'
+  ];
+  function rovarspraket(str) {
+    var result = '';
+    for (var i = 0; i < str.length; i++) {
+        if (consonants.indexOf(str[i]) === -1) {
+            result += str[i];
+            continue;
+        }
+        result += str[i] + 'o' + str[i];
+    }
+    return result;
+};
 
 
 
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
-
-
-
+  function sum(numbers) {
+    var total = 0;
+    for (var i = 0; i < numbers.length; i++) {
+      total += numbers[i];
+    }
+    return total;
+  }
+function multiply(numbers) {
+	var total = 1;
+	for (var i = 0; i < numbers.length; i++) {
+		total = (total * numbers[i]);
+	}
+	return total;
+}
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
+function reverse(sen) {
+return sen.split("").reverse().join("");
 
-
-
+}
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
+function findLongestWord(numbers) {
+var word = Math.max.numbers;
+return word.length; 
 
+}
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
