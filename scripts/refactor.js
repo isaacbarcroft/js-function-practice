@@ -290,9 +290,16 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+// NaN because youre trying to add a number to a string
 
+var speed = 0;
 
-
+var accelerate = function(amount) {
+  if (amount < 0){
+    amount = 1;
+  }
+  speed += amount;
+}; 
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
