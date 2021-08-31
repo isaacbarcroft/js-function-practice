@@ -86,7 +86,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+// because the "y" has a 1 second delay to the function 
 
 // -----------------------------------------------
 
