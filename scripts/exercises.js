@@ -104,14 +104,30 @@ return sen.split("").reverse().join("");
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
-
-
+function filterLongWords(array, i ) {
+  var newArray = [];
+    array.forEach(function (element) {
+        if( element.length > i ) { newArray.push(element)};
+    });
+    return newArray;
+}
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
+function charFreq(str) {
+ var freq = {};
+for (var i=0; i<str.length;i++) {
+    var character = str.charAt(i);
+    if (freq[character]) {
+       freq[character]++;
+    } else {
+       freq[character] = 1;
+    }
+}
 
-
+return freq;
+}
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////
