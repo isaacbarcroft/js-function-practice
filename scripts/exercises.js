@@ -13,6 +13,17 @@ return num2;
 }
 }
 
+ function max(num1, num2) {
+if (num1 > num2) {
+  return num1;
+}
+else {
+  return num2;
+}
+ }
+
+
+
 
 
   // ---------------------
@@ -21,6 +32,19 @@ return num2;
 function maxOfThree(num1, num2, num3){
   return Math.max(num1, num2, num3);
 }
+
+function maxOfThree(num1, num2, num3) {
+  if (num1 > num2 && num1 > num3) {
+return num1;
+  }
+  else if (num2 > num3) {
+    return num2;
+  }
+  else {
+    return num3;
+  }
+}
+
 
 
   // ---------------------
@@ -33,9 +57,16 @@ function isVowel(str) {
   else{
     return false;
   }
-
 }
 
+function isVowel(char) {
+  if  (char ===  'a' || char ===  'e' || char ===  'i' || char ===  'o' || char ===  'u')
+  return true;
+}
+return false;
+}
+
+'aeiou'.includes(str);
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
@@ -57,6 +88,16 @@ function isVowel(str) {
     return result;
 };
 
+function rovarspraket(text) {
+  text= text.toLowerCase().split("");  // splits into an array = 'fun' = ['f', 'u', 'n']
+for(let i =0; i <text.length; i++){
+  if ('bcdfghjklmnpqrstvwxy'.includes(text[i])){
+text[i]= text[i] + 'o' + text[i]; // 'f' => 'fof'; ['fof', 'u', 'non']
+  }
+ }
+return text.join(""); // array => string // 'fofunon' 
+}
+
 
 
   // ---------------------
@@ -69,8 +110,17 @@ function isVowel(str) {
     }
     return total;
   }
+function sum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]; // sum = sum + arr[i];
+  }
+  return sum;
+}
+
+
 function multiply(numbers) {
-	var total = 1;
+	var total = 1; // 1 because multiplication 
 	for (var i = 0; i < numbers.length; i++) {
 		total = (total * numbers[i]);
 	}
@@ -81,19 +131,30 @@ function multiply(numbers) {
   // ---------------------
 function reverse(sen) {
 return sen.split("").reverse().join("");
-
 }
+
+
+function reverse(str) { // happy
+  const strArray= []; 
+
+  for(let i = 0; i < str.length; i++){
+    strArray.unshift(str[i]);
+  }
+  return strArray.join(''); 
+}
+
   // ---------------------
+
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
   function findLongestWord(str) {
-    let words = str;
+   
     let maxLength = 0;
   
-    for (let i = 0; i < words.length; i++) {
-      if (words[i].length > maxLength) {
-        maxLength = words[i].length;
+    for (let i = 0; i < str.length; i++) {
+      if (str[i].length > maxLength) { // if greater than length, then update 'length' value 
+        maxLength = str[i].length;
       }
     }
     return maxLength;
@@ -101,17 +162,27 @@ return sen.split("").reverse().join("");
   
 
 
+
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 function filterLongWords(array, i ) {
   var newArray = [];
-    array.forEach(function (element) {
-        if( element.length > i ) { newArray.push(element)};
+    array.forEach(function (word) {
+        if( word.length > i ) { newArray.push(word)};
     });
     return newArray;
 }
 
+function filterLongWords(array, i) {
+const longWordsArr = [];
+for(let j = 0; j < arr.length; j++) {
+  if(arr[j].length > i) {
+    longWordsArr.push(arr[j]); // adds longer words into the array
+  }
+}
+return longWordsArr;
+}
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
@@ -128,6 +199,22 @@ for (var i=0; i<str.length;i++) {
 
 return freq;
 }
+
+function charFreq(str) {
+const freqList = {};
+for (let i =0; i < str.lngth; i++){
+  let testCase = str[i];
+  if(freqList[testCase]){
+    freqList[testCase] = freqList[testCase] + 1; 
+    //freqList[testCase]++;
+  }
+  else {
+    freqList[testCase] = 1;
+  }
+}
+return freqList;
+}
+
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////
