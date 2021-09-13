@@ -86,7 +86,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-// because the "y" has a 1 second delay to the function 
+// answer is "C" -- because the "y" has a 1 milisecond delay to the function 
 
 // -----------------------------------------------
 
@@ -108,7 +108,7 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-const reverseStr = str => [...str].reverse().join('');
+const reverseStr = str => [...str].split('').reverse().join('');
 
 // -----------------------------------------------
 
@@ -152,6 +152,18 @@ function spanishColor(type){
   }[type];
 }
 
+// Answer 
+const colors = {
+  rojo: "#ff0000",
+    blanco: "#ffffff",
+    azul: "#0000ff",
+    verde: "#00ff00",
+    negro: "#000000"
+}
+ const spanishColor = function(colorName) {
+   return colors[colorName];
+ }
+
 
 // -----------------------------------------------
 
@@ -168,7 +180,7 @@ function spanishColor(type){
 var foo = "bar";
 
 // Put your answer below -------------------------
-var foo; 
+let foo; 
 foo = " bar"; 
 
 // -----------------------------------------------
@@ -191,6 +203,11 @@ var callTenTimes = function(callback) {
 };
 
 // callTenTime(functionName);
+
+const callNtimes = function(callback, i){
+  const range = Array.from(Array(i).keys())
+  range.forEach(callback);
+}
 
 // Put your answer below -------------------------
 function callNtimes(callback){
@@ -227,16 +244,21 @@ var decreaseScore = function() {
 // Put your answer below -------------------------
 
 
+(function(){
+var score = 0;
+
 var increaseScore = function() {
-  var score = 0;
   score++;
 };
 
 var decreaseScore = function() {
-  var score = 0;
   score--;
 };
+})(); 
 
+
+console.log(increaseScore);
+console.log(decreaseScore);
 
 
 // -----------------------------------------------
@@ -261,10 +283,10 @@ var twoPlusTwo = addNumbers(2,2);
 
 
 function addNumbers(numberA, numberB){
- return console.log(numberA + numberB);
+ return numberA + numberB;
 
 };
-let twoPlusTwo = {...addNumbers};
+var twoPlusTwo = addNumbers(2, 2);
 
 // -----------------------------------------------
 
@@ -290,14 +312,11 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-// NaN because youre trying to add a number to a string
+// NaN because youre trying to add a number to a undefined
 
 var speed = 0;
 
-var accelerate = function(amount) {
-  if (amount < 0){
-    amount = 1;
-  }
+var accelerate = function(amount =1 ) {
   speed += amount;
 }; 
 // -----------------------------------------------
@@ -341,7 +360,7 @@ var callLater = function(timeout, callback) {
 };
 
 // Put your answer below -------------------------
-callLater(function){
+callLater(function) {
   var setTimeout = 1000
 };
 
