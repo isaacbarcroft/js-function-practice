@@ -60,7 +60,7 @@ function isVowel(str) {
 }
 
 function isVowel(char) {
-  if  (char ===  'a' || char ===  'e' || char ===  'i' || char ===  'o' || char ===  'u')
+  if  (char ===  'a' || char ===  'e' || char ===  'i' || char ===  'o' || char ===  'u'){
   return true;
 }
 return false;

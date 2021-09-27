@@ -214,7 +214,7 @@ function callNtimes(callback){
   var range = Array.from(Array(x).keys());
   range.forEach(callback);
 };
-}
+
 
 // -----------------------------------------------
 
@@ -231,7 +231,7 @@ function callNtimes(callback){
 
 // HINT: "global scope"
 
-var score = 0;
+let score = 0;
 
 var increaseScore = function() {
   score++;
@@ -361,7 +361,7 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 callLater(function) {
-  var setTimeout = 1000
+  let setTimeout = 1000;
 };
 
 // -----------------------------------------------
